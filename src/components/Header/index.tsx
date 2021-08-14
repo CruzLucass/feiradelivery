@@ -12,7 +12,6 @@ type Props = {
 
 export function Header({ title, action }: Props) {
 
-
     return (
         <View
             style={styles.container}

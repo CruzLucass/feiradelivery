@@ -4,36 +4,81 @@ import {
     View,
     Text,
     TextInput,
+    StatusBar
 } from 'react-native';
-import { Background } from '../../components/Background';
 
 import { Button } from '../../components/Button';
+import { ButtonIcon } from '../../components/ButtonIcon';
 import { Header } from '../../components/Header';
+import { Background } from '../../components/Background';
+import { InputArea } from '../../components/InputArea';
+import { MiniLine } from '../../components/MiniLine';
 
 import { styles } from './styles';
 
+/*StatusBar faz aparecer a barra de status corretamente, com o transparent melhora a visualização
+porem fica branco ai com o traslucent ele fica por cima do Header*/
+
+//Usou-se o *handle* para poder significar lidar com o signin - onde Handle é alavanca - puxador, etc.
+
+//Quando o usuario usar o HandleSignIn ele vai navegar até a pagina HOME - usa-se isso para colocar em botoes
+
+/*const navigation = useNavigation();
+
+    function handleSignIn() {
+        navigation.navigate('Home');
+    }
+    no button
+    onPress={"handleSignIn"}
+*/
+
 export function Signin() {
+
     return (
         <Background>
             <Header title='Tela de Login' />
             <View style={styles.container}>
 
+                <View style={styles.content}>
 
+                    <Text style={styles.title}>
+                        Faça seu Login
+                    </Text>
 
-                <TextInput
-                    style={styles.input}
-                    placeholder='Login'
-                />
+                    <InputArea
+                        placeholder='Login'
+                    />
 
-                <TextInput
-                    style={styles.input}
-                    secureTextEntry={true}
-                    placeholder='Senha'
-                />
+                    <InputArea
+                        placeholder='Senha'
+                        secureTextEntry={true}
+                    />
 
-                <Button
-                    title="Logar"
-                />
+                    <Text style={styles.password}>
+                        Esqueci minha senha
+                    </Text>
+
+                    <Button
+                        title="Entrar"
+                    />
+
+                    <View style={styles.register}>
+                        <MiniLine />
+
+                        <View>
+                            <Text style={styles.titleRegister}>
+                                CADASTRE-SE
+                            </Text>
+                        </View>
+
+                        <MiniLine />
+                    </View>
+
+                    <Button
+                        title="Sou Produtor"
+                    />
+
+                </View>
 
             </View>
 

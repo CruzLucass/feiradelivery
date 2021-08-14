@@ -1,18 +1,15 @@
 import { StyleSheet } from 'react-native';
+import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
     container: {
+        marginTop: 10,
+        padding: 10,
         width: 300,
         height: 50,
-        backgroundColor: 'gray',
-        marginTop: 10,
-        borderRadius: 4,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    title: {
+        backgroundColor: '#fff',
         fontSize: 16,
         fontWeight: 'bold',
-        color: '#fff'
+        borderRadius: 3
     }
 });
