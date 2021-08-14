@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "feiraDeliveryTests",
-    "slug": "feiraDeliveryTests",
+    "name": "feiraDelivery",
+    "slug": "feiraDelivery",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
