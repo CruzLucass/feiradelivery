@@ -14,14 +14,3 @@ export function MiniLine({ isCentered }: Props) {
         />
     );
 }
-/*
-style={[
-    styles.container,
-    isCentered ? {
-        marginVertical: 12,
-    } : {
-        marginTop: 2,
-        marginBottom: 31,
-    }
-]}
-*/
