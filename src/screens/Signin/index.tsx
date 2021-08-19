@@ -15,6 +15,8 @@ import { InputArea } from '../../components/InputArea';
 import { MiniLine } from '../../components/MiniLine';
 
 import { styles } from './styles';
+import { useNavigation } from '@react-navigation/native';
+import { Routes } from '../../routes';
 
 /*StatusBar faz aparecer a barra de status corretamente, com o transparent melhora a visualização
 porem fica branco ai com o traslucent ele fica por cima do Header*/
@@ -26,13 +28,19 @@ porem fica branco ai com o traslucent ele fica por cima do Header*/
 /*const navigation = useNavigation();
 
     function handleSignIn() {
-        navigation.navigate('Home');
+        navigation.navigate(Routes);
     }
     no button
     onPress={"handleSignIn"}
 */
 
 export function Signin() {
+    const navigation = useNavigation();
+
+    function handleSignIn() {
+        //navigation.navigate('Home');
+    }
+
 
     return (
         <Background>
@@ -60,6 +68,7 @@ export function Signin() {
 
                     <Button
                         title="Entrar"
+                        onPress={handleSignIn}
                     />
 
                     <View style={styles.register}>
