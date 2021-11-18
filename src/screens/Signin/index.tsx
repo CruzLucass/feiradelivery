@@ -3,8 +3,6 @@ import React from 'react';
 import {
     View,
     Text,
-    TextInput,
-    StatusBar
 } from 'react-native';
 
 import { Button } from '../../components/Button';
@@ -16,7 +14,7 @@ import { MiniLine } from '../../components/MiniLine';
 
 import { styles } from './styles';
 import { useNavigation } from '@react-navigation/native';
-import { Routes } from '../../routes';
+
 
 /*StatusBar faz aparecer a barra de status corretamente, com o transparent melhora a visualização
 porem fica branco ai com o traslucent ele fica por cima do Header*/
@@ -40,7 +38,6 @@ export function Signin() {
     function handleSignIn() {
         //navigation.navigate('Home');
     }
-
 
     return (
         <Background>
